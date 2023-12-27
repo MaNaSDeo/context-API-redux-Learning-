@@ -1,9 +1,12 @@
+import { useContext } from 'react';
+import { ThemeContext } from './theme/ThemeContextProvide';
 import Header from './Header';
 
-export default function Page({theme, toggleTheme}) {
+export default function Page() {
+  const { theme } = useContext(ThemeContext);
   return (
     <div id="app" className={theme}>
-      <Header toggleTheme={toggleTheme} />
+      <Header />
 
       <article>
         <h2>React Course</h2>
